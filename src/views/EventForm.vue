@@ -7,30 +7,19 @@
 
       <BaseInput v-model="event.title" type="text" label="Title" />
 
-      <label>Description</label>
-      <input
-        v-model="event.description"
-        type="text"
-        placeholder="Description"
-        class="field"
-      />
+      <BaseInput v-model="event.description" type="text" label="Description" />
 
       <h3>Where is your event?</h3>
 
-      <label>Location</label>
-      <input
-        v-model="event.location"
-        type="text"
-        placeholder="Location"
-        class="field"
-      />
-      <h3>Who is your organizer?</h3>
+      <BaseInput v-model="event.location" type="text" label="Location" />
 
+      <h3>Who is your organizer?</h3>
       <BaseSelect
         :options="GStore.organizers"
         v-model="event.organizer.id"
         label="Select an Organizer"
       />
+
       <button type="submit">Submit</button>
     </form>
 

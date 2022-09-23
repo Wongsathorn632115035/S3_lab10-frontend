@@ -1,12 +1,10 @@
 <template>
   <label v-if="label">{{ label }}</label>
-
   <select
     class="field"
     :value="modelValue"
     v-bind="{
       ...$attrs,
-
       onChange: ($event) => {
         $emit('update:modelValue', $event.target.value)
       }
@@ -28,19 +26,14 @@ export default {
   props: {
     label: {
       type: String,
-
       default: ''
     },
-
     modelValue: {
       type: [String, Number, Object],
-
       default: ''
     },
-
     options: {
       type: Array,
-
       required: true
     }
   }
